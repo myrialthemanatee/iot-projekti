@@ -7,6 +7,34 @@
         "wifi-password": {
             "help": "WiFi Password",
             "value": "\"PASS\""
+        },
+        "esp-rx-pin": {
+            "help": "ESP8266 module RX pin",
+            "value": "PB_7"
+        },
+        "esp-tx-pin": {
+            "help": "ESP8266 module TX pin",
+            "value": "PB_6"
+        },
+        "mqtt-id": {
+            "help": "MQTT Client id",
+            "value": "\"MBED_MQTT_CLIENT_ID\""
+        },
+        "mqtt-broker-ip": {
+            "help": "MQTT Broker host ip.",
+            "value": "\"CHANGE_IF_USE_BROKER_IP\""
+        },
+      "mqtt-broker-hostname": {
+            "help": "MQTT Broker resolvable hostname.",
+            "value": "\"CHANGE_IF_USE_BROKER_HOSTNAME\""
+        },
+        "mqtt-broker-port": {
+            "help": "MQTT Broker port",
+            "value": "1883"
+        },
+        "mqtt-topic": {
+            "help": "MQTT topic to publish",
+            "value": "\"test/topic\""
         }
     },
     "target_overrides": {
