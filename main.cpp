@@ -36,7 +36,7 @@ int main()
     //SocketAddress MQTTBroker(MBED_CONF_APP_MQTT_BROKER_IP, MBED_CONF_APP_MQTT_BROKER_PORT);
     
     // Use with DNS
-    esp.gethostbyname(MBED_CONF_APP_MQTT_BROKER_HOSTNAME, &MQTTBroker);
+    esp.gethostbyname(MBED_CONF_APP_MQTT_BROKER_HOSTNAME, &MQTTBroker, NSAPI_IPv4, "esp");
     MQTTBroker.set_port(MBED_CONF_APP_MQTT_BROKER_PORT);
 
     MQTTPacket_connectData data = MQTTPacket_connectData_initializer;       
@@ -57,8 +57,11 @@ int main()
     socket.open(&esp);
     socket.connect(MQTTBroker);
     client.connect(data);
-
-    client.publish(MBED_CONF_APP_MQTT_TOPIC, msg);
+    
+    while(1) {
+        client.publish(MBED_CONF_APP_MQTT_TOPIC, msg);
+        ThisThread::sleep_for(30000);
+    }
     //client.yield(100);
     client.disconnect();
 
