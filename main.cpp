@@ -60,6 +60,9 @@ int main()
     
     while(1) {
         client.publish(MBED_CONF_APP_MQTT_TOPIC, msg);
+        
+        // Sleep time must be less than TCP timeout
+        // TODO: check if socket is usable before publishing
         ThisThread::sleep_for(30000);
     }
     //client.yield(100);
