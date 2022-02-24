@@ -2,11 +2,11 @@
     "config": {
         "wifi-ssid": {
             "help": "WiFi SSID",
-            "value": "\"CHANGE_SSID_HERE\""
+            "value": "\"HAMKvisitor\""
         },
         "wifi-password": {
             "help": "WiFi Password",
-            "value": "\"CHANGE_WIFI_PASS_HERE\""
+            "value": "\"hamkvisitor\""
         },
         "esp-rx-pin": {
             "help": "ESP8266 module RX pin",
@@ -18,7 +18,7 @@
         },
         "mqtt-id": {
             "help": "MQTT Client id",
-            "value": "\"MUCH_UNIQUE_ID\""
+            "value": "\"dippadaa112\""
         },
         "mqtt-broker-ip": {
             "help": "MQTT Broker host ip.",
@@ -26,7 +26,7 @@
         },
       "mqtt-broker-hostname": {
             "help": "MQTT Broker resolvable hostname.",
-            "value": "\"CHANGE_BROKER_DNS_ADDRESS_HERE\""
+            "value": "\"test.mosquitto.org\""
         },
         "mqtt-broker-port": {
             "help": "MQTT Broker port",
@@ -34,7 +34,7 @@
         },
         "mqtt-topic": {
             "help": "MQTT topic to publish",
-            "value": "\"CHANGE_TOPIC_HERE\""
+            "value": "\"SK/A103/11\""
         }
     },
     "target_overrides": {
